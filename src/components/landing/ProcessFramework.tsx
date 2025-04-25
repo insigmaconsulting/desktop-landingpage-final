@@ -3,40 +3,96 @@ import { ProcessStep } from "@/components/ui/ProcessStep";
 
 export const ProcessFramework = () => {
   return (
-    <section className="bg-[rgba(245,243,237,1)] flex w-full flex-col items-center justify-center mt-[182px] px-20 py-[148px] max-md:max-w-full max-md:mt-10 max-md:px-5 max-md:py-[100px]">
-      <div className="flex mb-[-33px] w-full max-w-[1180px] flex-col items-stretch max-md:max-w-full max-md:mb-2.5">
-        <h2 className="text-black text-6xl font-medium leading-none tracking-[-1.5px] max-md:max-w-full max-md:text-[40px]">
+    <section className="bg-[rgba(245,243,237,1)] flex w-full flex-col overflow-hidden items-center justify-center px-20 py-32 max-md:max-w-full max-md:px-5 max-md:py-[100px]">
+      <div className="flex mb-[30px] w-full max-w-[91.5%] mx-auto flex-col max-md:mb-2.5">
+        <h2 className="text-black text-[50px] font-medium leading-[1.1] tracking-[-1.5px] max-md:text-[40px] max-md:px-5">
           Our Process Framework
         </h2>
-
-        <div className="flex items-stretch gap-5 font-normal flex-wrap justify-between max-md:max-w-full">
-          <div className="text-[rgba(147,146,142,1)] text-[40px] leading-none tracking-[-1.5px] max-md:max-w-full">
-            Defining Our Process Bylaws
+        <h2 className="text-[rgba(147,146,142,1)] text-[50px] font-medium leading-[1.1] tracking-[-1.5px] max-md:text-[40px] max-md:px-5">
+          Defining Our Process Bylaws
+        </h2>
+        <div className="bg-white rounded-[26px] mt-[75px]">
+          <div className="bg-white rounded-[26px] max-md:mt-10">
+            {/* <div className="gap-5 flex           max-md:flex-col max-md:items-stretch"> */}
+            <div className="gap-5 flex h-[490px] max-md:flex-col max-md:items-stretch">
+              <div className="w-[50%] max-md:w-full max-md:ml-0">
+                <img
+                  src="/images/ProcessFramework1.jpg"
+                  alt="About Us"
+                  // className="aspect-[0.93] object-cover w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
+                  className="aspect-[0.93] object-cover object-left w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
+                />
+              </div>
+              <div className="w-[50%] ml-5 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col text-[40px] text-[rgba(49,49,49,1)] font-normal leading-[1.1] my-auto ml-[35px] mr-[35px] mt-[22%]                             max-md:max-w-full max-md:mt-10">
+                  <h3 className="tracking-[-1.2px]">1. Ideation & Strategy</h3>
+                  <p className="text-[rgba(147,146,142,1)] text-[25px] leading-8 tracking-[-0.5px] self-stretch mt-[30px] max-md:max-w-full">
+                    Utilize advanced technology and strict safety protocols
+                    to ensure precise, efficient construction while
+                    maintaining high-quality standards.
+                  </p>
+                  {/* <button className="bg-[rgba(208,172,128,1)] text-sm leading-none mt-[40px] px-0 py-4 rounded-[25px] hover:bg-[rgba(188,152,108,1)] transition-colors w-auto inline-block"> */}
+                  {/* <button className="bg-[rgba(208,172,128,1)] text-sm text-[rgba(49,49,49,1)] leading-none mt-[27px] px-8 py-4 rounded-[25px] hover:bg-[rgba(188,152,108,1)] transition-colors w-fit max-md:px-5">
+                    Contact Us
+                  </button> */}
+                </div>
+              </div>
+            </div>
           </div>
-          <button className="bg-[rgba(208,172,128,1)] text-sm text-[rgba(49,49,49,1)] text-right leading-none mt-2.5 px-6 py-4 rounded-[25px] max-md:px-5">
-            Contact Our Team
-          </button>
-        </div>
-
-        <div className="bg-white border flex w-full flex-col mt-[75px] p-px rounded-[26px] border-[rgba(225,224,219,1)] border-solid max-md:max-w-full max-md:mt-10">
-          <ProcessStep
-            title="Ideation & Strategy"
-            description="Collaborate with clients to create detailed project blueprints that outline clear objectives and sustainable solutions."
-            imageUrl="https://cdn.builder.io/api/v1/image/assets/4f7ca061f2a94b24bf1c38618dcebabf/2519235ff0f6dbf7b13e43ef8e2aff205ce4c77b?placeholderIfAbsent=true"
-          />
-
-          <ProcessStep
-            title="Execution & Quality Control"
-            description="Utilize advanced technology and strict safety protocols to ensure precise, efficient construction while maintaining high-quality standards."
-            imageUrl="https://cdn.builder.io/api/v1/image/assets/4f7ca061f2a94b24bf1c38618dcebabf/842998bb944d8ac8aeb209d045b3a52f1b037c3f?placeholderIfAbsent=true"
-            imagePosition="left"
-          />
-
-          <ProcessStep
-            title="Delivery, Realization & Evolution"
-            description="Complete projects on time and on budget, followed by comprehensive reviews to refine processes and drive future innovation."
-            imageUrl="https://cdn.builder.io/api/v1/image/assets/4f7ca061f2a94b24bf1c38618dcebabf/a5e2ceafb9cb2d0d8378e404dafe265ca402ae7b?placeholderIfAbsent=true"
-          />
+          <div className="bg-white rounded-[26px] max-md:mt-10">
+            {/* <div className="gap-5 flex           max-md:flex-col max-md:items-stretch"> */}
+            <div className="gap-5 flex h-[490px] max-md:flex-col max-md:items-stretch">
+              <div className="w-[50%] ml-5 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col text-[40px] text-[rgba(49,49,49,1)] font-normal leading-[1.1] my-auto ml-[35px] mr-[35px] mt-[22%]                             max-md:max-w-full max-md:mt-10">
+                  <h3 className="tracking-[-1.2px]">2. Execution & Quality Control</h3>
+                  <p className="text-[rgba(147,146,142,1)] text-[25px] leading-8 tracking-[-0.5px] self-stretch mt-[30px] max-md:max-w-full">
+                    We are visionary RCC specialists, turning ambitious visions
+                    into enduring landmarks through cutting-edge technology and
+                    masterful craftsmanship.
+                  </p>
+                  {/* <button className="bg-[rgba(208,172,128,1)] text-sm leading-none mt-[40px] px-0 py-4 rounded-[25px] hover:bg-[rgba(188,152,108,1)] transition-colors w-auto inline-block"> */}
+                  {/* <button className="bg-[rgba(208,172,128,1)] text-sm text-[rgba(49,49,49,1)] leading-none mt-[27px] px-8 py-4 rounded-[25px] hover:bg-[rgba(188,152,108,1)] transition-colors w-fit max-md:px-5">
+                    Contact Us
+                  </button> */}
+                </div>
+              </div>
+              <div className="w-[50%] max-md:w-full max-md:ml-0">
+                <img
+                  src="/images/ProcessFramework2.jpg"
+                  alt="About Us"
+                  // className="aspect-[0.93] object-cover w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
+                  className="aspect-[0.93] object-cover object-center w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="bg-white rounded-[26px] max-md:mt-10">
+            {/* <div className="gap-5 flex           max-md:flex-col max-md:items-stretch"> */}
+            <div className="gap-5 flex h-[490px] max-md:flex-col max-md:items-stretch">
+              <div className="w-[50%] max-md:w-full max-md:ml-0">
+                <img
+                  src="/images/ProcessFramework3.jpg"
+                  alt="About Us"
+                  // className="aspect-[0.93] object-cover w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
+                  className="aspect-[0.93] object-cover object-center w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
+                />
+              </div>
+              <div className="w-[50%] ml-5 max-md:w-full max-md:ml-0">
+                <div className="flex flex-col text-[40px] text-[rgba(49,49,49,1)] font-normal leading-[1.1] my-auto ml-[35px] mr-[35px] mt-[22%]                             max-md:max-w-full max-md:mt-10">
+                  <h3 className="tracking-[-1.2px]">3. Delivery, Realization & Evolution</h3>
+                  <p className="text-[rgba(147,146,142,1)] text-[25px] leading-8 tracking-[-0.5px] self-stretch mt-[30px] max-md:max-w-full">
+                    Complete projects on time and on budget, followed by
+                    comprehensive reviews to refine processes
+                    and drive future innovation.
+                  </p>
+                  {/* <button className="bg-[rgba(208,172,128,1)] text-sm leading-none mt-[40px] px-0 py-4 rounded-[25px] hover:bg-[rgba(188,152,108,1)] transition-colors w-auto inline-block"> */}
+                  {/* <button className="bg-[rgba(208,172,128,1)] text-sm text-[rgba(49,49,49,1)] leading-none mt-[27px] px-8 py-4 rounded-[25px] hover:bg-[rgba(188,152,108,1)] transition-colors w-fit max-md:px-5">
+                    Contact Us
+                  </button> */}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
