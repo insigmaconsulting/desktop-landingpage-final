@@ -1,91 +1,119 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import useEmblaCarousel from "embla-carousel-react";
 import { ServiceCard } from "@/components/ui/ServiceCard";
 
 export const HomeTypes = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+    align: "start",
+    speed: 10,
+    dragFree: false,
+  });
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const onScroll = () =>
+      setScrollProgress(Math.max(0, Math.min(1, emblaApi.scrollProgress())));
+    emblaApi.on("scroll", onScroll);
+    emblaApi.on("reInit", onScroll);
+    onScroll();
+    return () => {
+      emblaApi.off("scroll", onScroll);
+      emblaApi.off("reInit", onScroll);
+    };
+  }, [emblaApi]);
+
+  const items = [
+    {
+      src: "/images/HomeTypes1.jpg",
+      title: "Luxury Houses",
+      description:
+        "Elegance meets innovation—crafted for comfort, style, and timeless",
+    },
+    {
+      src: "/images/HomeTypes2.jpg",
+      title: "Modern Row Houses",
+      description:
+        "Space-efficient, modern row houses with sleek design and functionality.",
+    },
+    {
+      src: "/images/HomeTypes3.jpg",
+      title: "Farm Houses",
+      description:
+        "Rustic farmhouse retreats blending comfort and countryside charm.",
+    },
+    {
+      src: "/images/HomeTypes4.jpg",
+      title: "Beach Villas",
+      description: "Coastal villas designed for ultimate relaxation by the sea.",
+    },
+    {
+      src: "/images/HomeTypes5.jpg",
+      title: "Urban Lofts",
+      description:
+        "Stylish loft spaces ideal for a contemporary urban lifestyle.",
+    },
+  ];
+
   return (
-    <section className="flex w-full max-w-[1310px] flex-col items-stretch mt-[72px] max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
-      <div className="flex w-full max-w-[1181px] items-start gap-5 flex-wrap justify-between max-md:max-w-full">
-        <div className="flex items-stretch gap-[11px] text-[50px] font-medium tracking-[-1.5px] leading-[1.1] flex-wrap max-md:text-[40px]">
-          <h1 className="text-black grow shrink basis-auto max-md:text-[40px]">
-            Your Home.
-          </h1>
-          <span className="text-[rgba(147,146,142,1)] basis-auto max-md:text-[40px]">
-            Your Way.
-          </span>
+    <section className="w-full overflow-hidden max-md:max-w-full max-md:mt-10">
+      {/* Heading */}
+      <div className="flex w-full max-w-[82%] mt-[140px] mx-auto items-start gap-5 justify-between max-md:max-w-full">
+        <div className="flex items-stretch gap-[11px] text-[50px] font-medium tracking-[-1.5px] leading-[1.1] max-md:text-[40px]">
+          <h1 className="text-black">Your Home.</h1>
+          <span className="text-[rgba(147,146,142,1)]">Your Way.</span>
         </div>
-        <button className="bg-[rgba(208,172,128,1)] text-sm text-[rgba(49,49,49,1)] font-normal text-right leading-none mt-[34px] px-[25px] py-4 rounded-[25px] max-md:px-5">
+        <button className="bg-[rgba(208,172,128,1)] text-sm leading-none mt-[25px] px-[25px] py-4 rounded-[25px] max-md:px-5">
           Contact Us
         </button>
       </div>
 
-      <div className="mt-[43px] max-md:max-w-full max-md:mt-10">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-          <div className="w-[74%] max-md:w-full max-md:ml-0">
-            <div className="flex w-full flex-col items-stretch max-md:max-w-full max-md:mt-8">
-              <div className="z-10 flex w-full items-stretch gap-[40px_62px] flex-wrap max-md:max-w-full">
-                <div className="flex items-stretch gap-2">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/4f7ca061f2a94b24bf1c38618dcebabf/d9ed95ed52274742da296b7d500e37ebf8ffd503?placeholderIfAbsent=true"
-                    alt="Design preview 1"
-                    className="aspect-[1] object-contain w-[50px] shrink-0 rounded-[10px]"
-                  />
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/4f7ca061f2a94b24bf1c38618dcebabf/f678ca2e24ece58e3cd2bd03ac4176c565ca5260?placeholderIfAbsent=true"
-                    alt="Design preview 2"
-                    className="aspect-[0.98] object-contain w-[49px] shrink-0 rounded-[10px]"
-                  />
-                </div>
-                <div className="grow shrink basis-auto max-md:max-w-full">
-                  <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-                    <div className="w-6/12 max-md:w-full max-md:ml-0">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/4f7ca061f2a94b24bf1c38618dcebabf/ef08cd4e9d6e3386934326c9e8948fb5be7900f0?placeholderIfAbsent=true"
-                        alt="House showcase 1"
-                        className="aspect-[0.76] object-contain w-full grow rounded-[25px] max-md:mt-8"
-                      />
-                    </div>
-                    <div className="w-6/12 ml-5 max-md:w-full max-md:ml-0">
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/4f7ca061f2a94b24bf1c38618dcebabf/b3c01261b9b9b1b790fb94ce1c95a9d8affbc0ee?placeholderIfAbsent=true"
-                        alt="House showcase 2"
-                        className="aspect-[0.76] object-contain w-full grow rounded-[20px] max-md:mt-8"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="w-[778px] max-w-full">
-                <div className="gap-5 flex max-md:flex-col max-md:items-stretch">
-                  <ServiceCard
-                    title="Luxury Houses"
-                    description="Elegance meets innovation—crafted for comfort, style, and timeless luxury."
-                    className="w-6/12 max-md:w-full max-md:ml-0"
-                  />
-                  <ServiceCard
-                    title="Row Houses"
-                    description="Modern, space-efficient homes with premium design and seamless functionality."
-                    className="w-6/12 ml-5 max-md:w-full max-md:ml-0"
-                  />
-                </div>
-              </div>
-            </div>
+      {/* Carousel + Arrows */}
+      <div className="w-full max-w-[91%] mt-[40px] ml-[9%] max-md:ml-0 max-md:mt-10">
+        <div className="flex items-start gap-4">
+          {/* Arrows */}
+          <div className="flex gap-2 pt-1 mr-[47px]">
+            <button
+              onClick={() => emblaApi?.scrollPrev()}
+              className="w-[50px] h-[50px] bg-white rounded-[10px] flex items-center justify-center border border-[rgb(154,154,150)]"
+            >
+              <img src="/images/left-arrow.svg" alt="Prev" className="w-6" />
+            </button>
+            <button
+              onClick={() => emblaApi?.scrollNext()}
+              className="w-[50px] h-[50px] bg-white rounded-[10px] flex items-center justify-center border border-[rgb(154,154,150)]"
+            >
+              <img src="/images/right-arrow.svg" alt="Next" className="w-5" />
+            </button>
           </div>
 
-          <div className="w-[26%] ml-5 max-md:w-full max-md:ml-0">
-            <ServiceCard
-              title="Farm Houses"
-              description="Luxury in nature—spacious, serene, and built for a perfect escape."
-              imageUrl="https://cdn.builder.io/api/v1/image/assets/4f7ca061f2a94b24bf1c38618dcebabf/6481e8ab43fb2b9b5fc025aeda97a958842987a3?placeholderIfAbsent=true"
-              className="border grow font-normal rounded-[20px] border-black border-solid max-md:mt-8"
-            />
+          {/* Embla viewport */}
+          <div className="overflow-hidden flex-grow" ref={emblaRef}>
+            <div className="flex space-x-8">
+              {items.map(({ src, title, description }, idx) => (
+                <div key={idx} className="flex-none">
+                  <ServiceCard
+                    imageUrl={src}
+                    title={title}
+                    description={description}
+                    className="w-[375px]"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="bg-[rgba(0,0,0,0.1)] self-center flex w-[1010px] max-w-full flex-col ml-[21px] mt-12 rounded-[10px] max-md:mt-10 max-md:pr-5">
-        <div className="bg-[rgba(49,49,49,1)] flex w-[426px] shrink-0 max-w-full h-1" />
+      {/* Bottom scroll-progress bar */}
+      <div className="bg-[rgba(0,0,0,0.1)] self-center flex w-[1080px] max-w-full flex-col ml-[20%] mt-12 rounded-[10px] max-md:mt-10 max-md:pr-5">
+        <div
+          className="bg-[rgba(49,49,49,1)] h-1"
+          style={{ width: `${scrollProgress * 100}%` }}
+        />
       </div>
+      <div className="mb-[135px]"></div>
     </section>
   );
 };

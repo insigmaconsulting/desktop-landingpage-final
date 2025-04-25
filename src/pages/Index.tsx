@@ -7,7 +7,7 @@ import { AboutSection } from "@/components/landing/AboutSection";
 import { HomeTypes } from "@/components/landing/HomeTypes";
 import { ProcessFramework } from "@/components/landing/ProcessFramework";
 import { QuoteSection } from "@/components/landing/QuoteSection";
-import { ServicesSection } from "@/components/landing/ServicesSection";
+import { WhyUs } from "@/components/landing/WhyUs";
 import { Footer } from "@/components/layout/Footer";
 
 const Index = () => {
@@ -24,7 +24,7 @@ const Index = () => {
         <HomeTypes />
         <ProcessFramework />
         <QuoteSection />
-        <ServicesSection />
+        <WhyUs />
       </main>
       < Footer />
     </div>
