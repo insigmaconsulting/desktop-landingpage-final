@@ -26,30 +26,30 @@ export const HomeTypes = () => {
 
   const items = [
     {
-      src: "/images/HomeTypes1.jpg",
+      src: "/images/Landing/HomeTypes1.jpg",
       title: "Luxury Houses",
       description:
         "Elegance meets innovation—crafted for comfort, style, and timeless",
     },
     {
-      src: "/images/HomeTypes2.jpg",
+      src: "/images/Landing/HomeTypes2.jpg",
       title: "Modern Row Houses",
       description:
         "Space-efficient, modern row houses with sleek design and functionality.",
     },
     {
-      src: "/images/HomeTypes3.jpg",
+      src: "/images/Landing/HomeTypes3.jpg",
       title: "Farm Houses",
       description:
         "Rustic farmhouse retreats blending comfort and countryside charm.",
     },
     {
-      src: "/images/HomeTypes4.jpg",
+      src: "/images/Landing/HomeTypes4.jpg",
       title: "Beach Villas",
       description: "Coastal villas designed for ultimate relaxation by the sea.",
     },
     {
-      src: "/images/HomeTypes5.jpg",
+      src: "/images/Landing/HomeTypes5.jpg",
       title: "Urban Lofts",
       description:
         "Stylish loft spaces ideal for a contemporary urban lifestyle.",
@@ -78,13 +78,13 @@ export const HomeTypes = () => {
               onClick={() => emblaApi?.scrollPrev()}
               className="w-[50px] h-[50px] bg-white rounded-[10px] flex items-center justify-center border border-[rgb(154,154,150)]"
             >
-              <img src="/images/left-arrow.svg" alt="Prev" className="w-6" />
+              <img src="/images/Landing/left-arrow.svg" alt="Prev" className="w-6" />
             </button>
             <button
               onClick={() => emblaApi?.scrollNext()}
               className="w-[50px] h-[50px] bg-white rounded-[10px] flex items-center justify-center border border-[rgb(154,154,150)]"
             >
-              <img src="/images/right-arrow.svg" alt="Next" className="w-5" />
+              <img src="/images/Landing/right-arrow.svg" alt="Next" className="w-5" />
             </button>
           </div>
 

@@ -17,7 +17,7 @@ export const ProcessFramework = () => {
             <div className="gap-5 flex h-[490px] max-md:flex-col max-md:items-stretch">
               <div className="w-[50%] max-md:w-full max-md:ml-0">
                 <img
-                  src="/images/ProcessFramework1.jpg"
+                  src="/images/Landing/ProcessFramework1.jpg"
                   alt="About Us"
                   // className="aspect-[0.93] object-cover w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
                   className="aspect-[0.93] object-cover object-left w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
@@ -58,7 +58,7 @@ export const ProcessFramework = () => {
               </div>
               <div className="w-[50%] max-md:w-full max-md:ml-0">
                 <img
-                  src="/images/ProcessFramework2.jpg"
+                  src="/images/Landing/ProcessFramework2.jpg"
                   alt="About Us"
                   // className="aspect-[0.93] object-cover w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
                   className="aspect-[0.93] object-cover object-center w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
@@ -71,7 +71,7 @@ export const ProcessFramework = () => {
             <div className="gap-5 flex h-[490px] max-md:flex-col max-md:items-stretch">
               <div className="w-[50%] max-md:w-full max-md:ml-0">
                 <img
-                  src="/images/ProcessFramework3.jpg"
+                  src="/images/Landing/ProcessFramework3.jpg"
                   alt="About Us"
                   // className="aspect-[0.93] object-cover w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"
                   className="aspect-[0.93] object-cover object-center w-full h-full rounded-3xl max-md:max-w-full max-md:mt-10"

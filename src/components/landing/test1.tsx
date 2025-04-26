@@ -27,7 +27,7 @@ export const WhyUs = () => {
         </div>
 
         {/* Two-column layout */}
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col mt-[10px] md:flex-row gap-8">
           {/* Left Image */}
           <div className="w-full max-h-[600px] md:w-1/2">
             <img
@@ -37,16 +37,24 @@ export const WhyUs = () => {
             />
           </div>
 
-          {/* Right Cards: one per row, full width */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
             {services.map((service, index) => (
-              <ServiceCard
+              // This wrapper shrinks only the first <img> inside ServiceCard:
+              <div
                 key={index}
-                imageUrl={service.icon}
-                title={service.title}
-                description={service.description}
-                className="w-full"
-              />
+                // className="[&>div>img]:w-12 [&>div>img]:h-12 [&>div>img]:mt-[40px] [&>div>img]:ml-[40px]"
+                className={
+                  "bg-[rgba(245,243,237,1)] rounded-[25px] [&>div>img]:w-9 [&>div>img]:h-9 [&>div>img]:mt-[45px] [&>div>img]:ml-[40px] " +
+                  "[&>div>div]:bg-[rgba(245,243,237,1)] [&>div>div]:py-[15px] [&>div>div>p]:mt-[20px] [&>div>div>p]:text-[25px] [&>div>div>p]:leading-[1.35] [&>div>div>p]:mb-[25px]"
+                }
+              >
+                <ServiceCard
+                  imageUrl={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  className="w-full"
+                />
+              </div>
             ))}
           </div>
         </div>
