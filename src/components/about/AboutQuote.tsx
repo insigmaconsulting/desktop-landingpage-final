@@ -1,6 +1,6 @@
 import React from "react";
 
-export const QuoteSection = () => {
+export const AboutQuote = () => {
   return (
     <section className="w-full max-w-[96.5%] mt-[125px]">
       <div className="flex flex-col self-stretch relative min-h-[535px] overflow-hidden items-center text-white font-normal text-center justify-center px-0 rounded-3xl max-md:max-w-full max-md:pt-[100px] max-md:px-5">

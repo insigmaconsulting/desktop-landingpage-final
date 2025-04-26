@@ -27,23 +27,32 @@ export const WhyUs = () => {
         </div>
 
         {/* Two-column layout */}
-        <div className="flex flex-col md:flex-row gap-8">
+        <div className="flex flex-col mt-[10px] md:flex-row gap-8">
           {/* Left Image */}
-          <div className="w-full max-h-[600px] md:w-1/2">
+          <div className="w-full max-h-[600px] md:w-1/2 md:sticky md:top-0">
             <img
               src="/images/WhyUs.jpg"
               alt="Why Us"
-              className="w-full h-full object-cover object-right rounded-3xl max-md:mb-8"
+              className="w-[82%] h-full object-cover object-right rounded-3xl"
             />
           </div>
 
-          {/* Right Cards: one per row, full width */}
           <div className="w-full md:w-1/2 flex flex-col gap-8">
             {services.map((service, index) => (
-              // This wrapper shrinks only the first <img> inside ServiceCard:
+              // Wrapper that customizes icon size, position, background & text padding, plus desc margin & font-size
               <div
                 key={index}
-                className="[&>div>img]:w-12 [&>div>img]:h-12"
+                className={`
+                  [&>div>img]:w-12
+                  [&>div>img]:h-12
+                  [&>div>img]:mt-[40px]
+                  [&>div>img]:ml-[40px]
+                  [&>div>div]:bg-[rgba(245,243,237,1)]
+                  [&>div>div]:px-[10px]
+                  [&>div>div]:py-[10px]
+                  [&>div>div>p]:mt-[8px]
+                  [&>div>div>p]:text-[18px]
+                `}
               >
                 <ServiceCard
                   imageUrl={service.icon}

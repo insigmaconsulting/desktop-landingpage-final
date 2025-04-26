@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Footer = () => {
+export const AboutFooter = () => {
   return (
     <footer className="bg-[rgba(245,243,237,1)] self-center flex w-full max-w-[97%] flex-col items-center mt-[142px] pt-[84px] px-20 rounded-3xl max-md:mt-10 max-md:px-5">
       <div className="w-full max-w-[95%] max-md:max-w-full">
