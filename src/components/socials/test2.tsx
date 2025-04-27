@@ -44,8 +44,7 @@ export const SocialsInstagram = () => {
           href="https://www.instagram.com/construction_pune/"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center self-center bg-[rgba(208,172,128,1)] text-sm text-[rgba(49,49,49,1)] font-normal leading-none px-[19px] py-4 rounded-[25px] max-md:pr-5"
-        >
+          className="inline-flex items-center self-center bg-[rgba(208,172,128,1)] text-sm text-[rgba(49,49,49,1)] font-normal leading-none px-[19px] py-4 rounded-[25px] max-md:pr-5">
           Instagram
           <img
             src="/images/Socials/SocialsInstagram.svg"
