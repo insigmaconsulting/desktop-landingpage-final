@@ -7,15 +7,6 @@ import { AboutFooter } from "@/components/about/AboutFooter";
 import { AboutContent } from "@/components/about/AboutContent";
 import { AboutQuote } from "@/components/about/AboutQuote";
 
-// const About = () => {
-//   return (
-//     <div className="min-h-screen p-8 bg-gray-50">
-//       <h1 className="text-4xl font-bold mb-6">About Us</h1>
-//       <AboutHero />
-//     </div>
-//   );
-// };
-
 const About = () => {
     return (
 <div className="bg-white flex flex-col items-stretch">
