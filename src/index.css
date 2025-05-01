@@ -104,27 +104,44 @@
   }
 } */
 
-@layer base {
+/* @layer base {
   html { 
-    /* @apply font-sans;  */
     font-family: 'PPMori';
     font-weight:900;
   }
   body { 
     @apply bg-background text-foreground; 
   }
+} */
+
+@layer base {
+  /* 1) register the full 100–900 range */
+  @font-face {
+    font-family: "PP Mori";
+    src: url("/fonts/ppmori.woff2") format("woff2"),
+         url("/fonts/ppmori.ttf")  format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* 2) use it everywhere by default */
+  html, body {
+    @apply font-sans;
+  }
 }
 
 
+
 /* Import font family */
-@font-face {
+/* @font-face {
   font-family: 'PPMori';
   src: url('/fonts/duo-studio-main/ppmori-regular.woff2') format('woff2-variations');
   font-weight: 100 900;
   font-style: normal;
   font-optical-sizing: auto;
   font-display: swap;
-}
+} */
 
 /* Static fallbacks (optional) */
 /* @font-face {

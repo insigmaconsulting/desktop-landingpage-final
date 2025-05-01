@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['PPMori', 'sans-serif'],
+				sans: ['PP Mori', 'system-ui', 'sans-serif'],
 				// "LiberationSans-Regular": ['LiberationSans-Regular','sans-serif'], // alias: 'custom'
 				// "LiberationSans-Italic": ['LiberationSans-Italic','sans-serif'],
 				// "LiberationSans-Bold": ['LiberationSans-Bold','sans-serif'],

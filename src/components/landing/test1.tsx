@@ -1,64 +1,65 @@
+
 import React from "react";
-import { ServiceCard } from "@/components/ui/ServiceCard";
 
-export const WhyUs = () => {
-  const services = [
-    { icon: "/images/WhyUsTime.svg", title: "Timely Delivery & Budget", description: "Timely delivery and budget control save you time and money." },
-    { icon: "/images/WhyUsQuality.svg", title: "Quality & Safety", description: "Skilled resources and strict safety protocols ensure top-quality work." },
-    { icon: "/images/WhyUsInnovative.svg", title: "Innovative Tech", description: "Cutting-edge tools and modern engineering boost precision and efficiency." },
-    { icon: "/images/WhyUsTurnkey.svg", title: "Turnkey Expertise", description: "We handle every detail—from excavation to completion—for a seamless experience." },
-    { icon: "/images/WhyUsFocus.svg", title: "Proven Excellence", description: "Our reputation and industry expertise consistently deliver superior, safe projects." },
-    { icon: "/images/WhyUsStrategy.svg", title: "Strategic Planning", description: "Detailed scheduling and organized execution drive project efficiency." },
-    { icon: "/images/WhyUsClient.svg", title: "Client Focus", description: "Transparent, honest communication and tailored solutions ensure client satisfaction." },
-    { icon: "/images/WhyUsCost.svg", title: "Cost Efficiency", description: "Smart cost control and resource management maximize value without compromise." },
-  ];
+export const Hero = () => (
+  <>
+    <section
+      className={
+        "relative overflow-hidden w-full max-w-[96.5%] max-sm:w-[93%] max-w-[1470px] mx-auto rounded-[30px] " +
+        "aspect-[16/9] sm:aspect-[2/1] xl:aspect-auto xl:h-[598px] " +
+        "px-10 max-md:px-5 md:pt-[250px]"
+      }
+    >
+      {/* Background Image */}
+      <img
+        src="/images/Landing/landing-hero.jpg"
+        alt="Hero Background"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-  return (
-    <section className="flex justify-center mt-[140px] max-md:mt-10">
-      <div className="w-[82%] flex flex-col">
-        {/* Section Title */}
-        <div className="text-left mb-16">
-          <h2 className="text-black text-[50px] font-medium leading-[1.1] tracking-[-1.5px] max-md:text-[40px]">
-            Why Neeya
-          </h2>
-          <h2 className="text-[rgba(147,146,142,1)] text-[50px] font-medium leading-[1.1] tracking-[-1.5px] max-md:text-[40px]">
-            Is The Right Choice For You.
-          </h2>
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/50 z-0" />
+
+      {/* Content for MD and above */}
+      <div
+        className="hidden md:flex flex-col relative z-10 w-full max-w-full mt-5 md:absolute md:left-[7%] md:top-[50%]"
+      >
+        <h1 className="text-white text-[clamp(20px,6vw,70px)] font-normal leading-[1.1] tracking-[-2.1px]">
+          Experts in
+        </h1>
+        <div className="text-white text-[clamp(20px,6vw,70px)] font-normal leading-[1.1] tracking-[-2.1px] mt-1">
+          RCC Construction
         </div>
-
-        {/* Two-column layout */}
-        <div className="flex flex-col mt-[10px] md:flex-row gap-8">
-          {/* Left Image */}
-          <div className="w-full max-h-[600px] md:w-1/2">
-            <img
-              src="/images/WhyUs.jpg"
-              alt="Why Us"
-              className="w-[82%] h-full object-cover object-right rounded-3xl"
-            />
-          </div>
-
-          <div className="w-full md:w-1/2 flex flex-col gap-8">
-            {services.map((service, index) => (
-              // This wrapper shrinks only the first <img> inside ServiceCard:
-              <div
-                key={index}
-                // className="[&>div>img]:w-12 [&>div>img]:h-12 [&>div>img]:mt-[40px] [&>div>img]:ml-[40px]"
-                className={
-                  "bg-[rgba(245,243,237,1)] rounded-[25px] [&>div>img]:w-9 [&>div>img]:h-9 [&>div>img]:mt-[45px] [&>div>img]:ml-[40px] " +
-                  "[&>div>div]:bg-[rgba(245,243,237,1)] [&>div>div]:py-[15px] [&>div>div>p]:mt-[20px] [&>div>div>p]:text-[25px] [&>div>div>p]:leading-[1.35] [&>div>div>p]:mb-[25px]"
-                }
-              >
-                <ServiceCard
-                  imageUrl={service.icon}
-                  title={service.title}
-                  description={service.description}
-                  className="w-full"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <button className="bg-[rgba(208,172,128,1)] text-sm text-[rgba(49,49,49,1)] leading-none mt-[1.6%] px-8 py-4 rounded-[25px] hover:bg-[rgba(188,152,108,1)] transition-colors w-fit">
+          Get in touch today
+        </button>
       </div>
     </section>
-  );
-};
+
+    {/* Content for SM and above, below MD */}
+    <div className="hidden bg-red-100 sm:flex  sm:flex-col md:hidden mt-5 w-full max-w-[96.5%] max-sm:w-[93%] mx-auto px-0">
+      <h1 className="text-black text-[clamp(20px,6vw,70px)] font-normal leading-[1.1] tracking-[-2.1px]">
+        Experts in
+      </h1>
+      <div className="text-black text-[clamp(20px,6vw,70px)] font-normal leading-[1.1] tracking-[-2.1px] mt-1">
+        RCC Construction
+      </div>
+      <button className="bg-[rgba(208,172,128,1)] text-sm text-[rgba(49,49,49,1)] leading-none mt-4 px-8 py-4 rounded-[25px] hover:bg-[rgba(188,152,108,1)] transition-colors w-fit">
+        Get in touch today
+      </button>
+    </div>
+
+    {/* Content for below SM */}
+    <div className="sm:hidden mt-5 w-full max-w-[96.5%] max-sm:w-[91%] mx-auto px-0">
+      <h1 className="text-black text-[clamp(40px,6vw,70px)] font-normal leading-[1.1] tracking-[-2.1px]">
+        Experts in
+      </h1>
+      <div className="text-black text-[clamp(40px,6vw,70px)] font-normal leading-[1.1] tracking-[-2.1px] mt-1">
+        RCC Construction
+      </div>
+      <button className="bg-[rgba(208,172,128,1)] text-md text-[rgba(49,49,49,1)] leading-none mt-2 px-8 py-4 rounded-[25px] hover:bg-[rgba(188,152,108,1)] transition-colors w-fit">
+        Get in touch today
+      </button>
+    </div>
+  </>
+);
